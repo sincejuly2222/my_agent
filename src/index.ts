@@ -1,0 +1,23 @@
+import { runBasicExample } from "./component/1.basic.js"; 
+// import { runImageExample } from "./component/2.image.js";
+// import { runStructuredOutputExample } from "./component/3.structed-output.js";
+// import { runToolExample } from "./component/4.tool.js";
+
+runBasicExample().catch((error: unknown) => {
+  console.error("Failed to run the image example:", error);
+  process.exitCode = 1;
+});
+
+// runStructuredOutputExample("public/miaoma-logo.png").catch((error: unknown) => {
+//   console.error("Failed to run the structured output example:", error);
+//   process.exitCode = 1;
+// });
+
+// runBasicExample().catch((error: unknown) => {
+//   console.error("Failed to run the basic example:", error);
+//   process.exitCode = 1;
+// });
+// runImageExample("public/miaoma-logo.png").catch((error: unknown) => {
+//   console.error("Failed to run the image example:", error);
+//   process.exitCode = 1;
+// });
