@@ -1,19 +1,21 @@
-import { runBasicExample } from "./component/1.basic.js"; 
+// import { runBasicExample } from "./component/1.basic.js"; 
 // import { runImageExample } from "./component/2.image.js";
 // import { runStructuredOutputExample } from "./component/3.structed-output.js";
 // import { runToolExample } from "./component/4.tool.js";
+import { runBasicExample } from "./component/5.agent/2.tools.ts";
 
-runBasicExample().catch((error: unknown) => {
-  console.error("Failed to run the image example:", error);
-  process.exitCode = 1;
-});
-
-// runStructuredOutputExample("public/miaoma-logo.png").catch((error: unknown) => {
-//   console.error("Failed to run the structured output example:", error);
+// runBasicExample().catch((error: unknown) => {
+//   console.error("Failed to run the image example:", error);
 //   process.exitCode = 1;
 // });
 
-// runBasicExample().catch((error: unknown) => {
+// runToolExample().catch((error: unknown) => {
+//   console.error("Failed to run the tool example:", error);
+//   process.exitCode = 1;
+// });
+
+runBasicExample()
+// .catch((error: unknown) => {
 //   console.error("Failed to run the basic example:", error);
 //   process.exitCode = 1;
 // });
