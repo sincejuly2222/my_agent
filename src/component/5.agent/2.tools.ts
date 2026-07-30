@@ -11,31 +11,45 @@ const llm = new ChatOpenAI({
   },
 });
 
-const getWeather = tool((input) => `${input.location}天气很好，是晴天`, {
-  name: "get_weather",
-  description: "获取给定地点的天气",
-  schema: z.object({
-    location: z.string().describe("要获取天气的地点"),
-  }),
-});
+const getWeather = tool(
+  async (input) => {
+    return `${input.location}天气很好，是晴天`;
+  },
+  {
+    name: "get_weather",
+    description: "获取给定地点的天气",
+    schema: z.object({
+      location: z.string().describe("要获取天气的地点"),
+    }),
+  },
+);
 
-const invoke = async () => {
+const getEmail = tool(
+  async (input) => {
+    return `已经发送邮件给${input.from} `;
+  },
+  {
+    name: "get_email",
+    description: "发送邮件",
+    schema: z.object({
+      from: z.string().describe("邮件的收件人"),
+    }),
+  },
+);
+
+export const runBasicExample = async () => {
   const agent = createAgent({
     model: llm,
-    tools: [getWeather],
+    tools: [getWeather, getEmail],
   });
 
   const res = await agent.invoke({
     messages: [
       {
         role: "user",
-        content: "请告诉我北京的天气情况",
+        content: "请获取北京的天气情况,然后天气情况发送邮件给小明",
       },
     ],
   });
   console.log(res, "1111111");
-};
-
-export const runBasicExample = () => {
-  invoke();
 };
