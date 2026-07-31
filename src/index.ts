@@ -3,7 +3,7 @@
 // import { runStructuredOutputExample } from "./component/3.structed-output.js";
 // import { runToolExample } from "./component/4.tool.js";
 // import { runBasicExample } from "./component/5.agent/1.bacsicImg.js";
-import { runBasicExample } from "./component/5.agent/2.tools.js";
+import { runBasicExample } from "./component/5.agent/3.format-res.js";
 
 // runBasicExample().catch((error: unknown) => {
 //   console.error("Failed to run the image example:", error);
