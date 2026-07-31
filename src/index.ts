@@ -3,7 +3,7 @@
 // import { runStructuredOutputExample } from "./component/3.structed-output.js";
 // import { runToolExample } from "./component/4.tool.js";
 // import { runBasicExample } from "./component/5.agent/1.bacsicImg.js";
-import { runBasicExample } from "./component/5.agent/my_agent";
+// import { runBasicExample } from "./component/5.agent/my_agent";
 
 // runBasicExample().catch((error: unknown) => {
 //   console.error("Failed to run the image example:", error);
@@ -15,7 +15,7 @@ import { runBasicExample } from "./component/5.agent/my_agent";
 //   process.exitCode = 1;
 // });
 
-runBasicExample()
+// runBasicExample()
 // .catch((error: unknown) => {
 //   console.error("Failed to run the basic example:", error);
 //   process.exitCode = 1;

@@ -67,3 +67,6 @@ export const runBasicExample = async()=>{
     }
   }
 }
+
+// 待学习  agent可视化工具：
+// https://smith.langchain.com/o/a4cb7cb7-b84d-4fe7-922e-4ffc3439b8b3/projects/p/9dab313f-d9a1-4c89-ae32-53701437641b?onboarding=my_agent&timeModel=%7B%22duration%22%3A%221d%22%7D
