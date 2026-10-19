@@ -1,5 +1,5 @@
 import "dotenv/config";
-import { agent } from "./agent";
+import { agent } from "./agent.js";
 
 export const invoke = async()=>{
      const res = await agent.invoke({ topic: 'cats' })

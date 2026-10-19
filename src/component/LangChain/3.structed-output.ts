@@ -23,7 +23,7 @@ type HtmlDomNode = {
 const htmlDomNodeSchema: z.ZodType<HtmlDomNode> = z.lazy(() =>
   z.object({
     tag: z.string(),
-    attributes: z.record(z.string()),
+    attributes: z.record(z.string(), z.string()),
     text: z.string(),
     children: z.array(htmlDomNodeSchema),
   }),
