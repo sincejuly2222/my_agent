@@ -4,12 +4,18 @@
 // import { runToolExample } from "./component/4.tool.js";
 // import { runBasicExample } from "./component/5.agent/1.bacsicImg.js";
 // import { runBasicExample } from "./component/5.agent/my_agent";
-import { invoke } from "./component/LangGraph/4.simple-agent/index.js";
+// import { invoke } from "./component/LangGraph/4.simple-agent/index.js";
+import { runModelIoExample } from "./component/LangChain/coreUse/01-model.js";
 
-invoke().catch((error: unknown) => {
-  console.error("Failed to run the image example:", error);
+runModelIoExample().catch((error: unknown) => {
+  console.error("Failed to run the model IO example:", error);
   process.exitCode = 1;
 });
+
+// invoke().catch((error: unknown) => {
+//   console.error("Failed to run the image example:", error);
+//   process.exitCode = 1;
+// });
 // runBasicExample().catch((error: unknown) => {
 //   console.error("Failed to run the image example:", error);
 //   process.exitCode = 1;
@@ -29,3 +35,4 @@ invoke().catch((error: unknown) => {
 //   console.error("Failed to run the image example:", error);
 //   process.exitCode = 1;
 // });
+
